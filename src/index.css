@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  font-family: Saira, sans-serif;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.star-shape {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid #D4AF37;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3s steps(20, end) forwards, blink-caret 0.75s step-end 4;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 15ch; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50%      { border-color: #D4AF37; }
+}
