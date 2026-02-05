@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import instagram from '../assets/instagram.png'
 import tiktok from '../assets/tiktok.png'
 import github from '../assets/github.png'
@@ -9,6 +10,8 @@ import CV from '../assets/CV.pdf'
 import { DownloadIcon, Mail } from 'lucide-react'
 
 const Hero = ({ darkMode }) => {
+
+    const [showProfileModal, setShowProfileModal] = useState(false);
 
     const socialIcons = [
         {icon: instagram, slt: 'instagram'},
@@ -63,14 +66,15 @@ const Hero = ({ darkMode }) => {
                         ))}
                     </div>
                     <div
-                    className='mb-4 sm:mb-6'
+                    className='mb-4 sm:mb-6 cursor-pointer'
                     data-aos='fade-up'
                     data-aos-delay='450'
+                    onClick={() => setShowProfileModal(true)}
                     >
                         <img
                         src={profileImg}
                         alt='Dilushgaran profile photo'
-                        className='w-48 h-48 sm:w-60 sm:h-60 rounded-full object-cover border-4 border-orange-500 shadow-lg'
+                        className='w-48 h-48 sm:w-60 sm:h-60 rounded-full object-cover border-4 border-orange-500 shadow-lg transform hover:scale-105 transition-transform duration-500'
                         />
                     </div>
                     <h1
@@ -136,6 +140,31 @@ const Hero = ({ darkMode }) => {
             <div className={`absolute top-20 left-20 w-40 h-40 sm:w-64 sm:h-64 ${theme.decorativeCircle} rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse delay-1000 hidden sm:block`}>
 
             </div>
+
+            {showProfileModal && (
+                <div
+                className='fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md'
+                onClick={() => setShowProfileModal(false)}
+                >
+                    <div
+                    className='relative max-w-xl w-[90%] sm:w-[75%]'
+                    onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                        type='button'
+                        onClick={() => setShowProfileModal(false)}
+                        className='absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-white/90 text-gray-800 rounded-full w-8 h-8 flex items-center justify-center shadow-md hover:bg-orange-500 hover:text-white transition-colors'
+                        >
+                            ×
+                        </button>
+                        <img
+                        src={profileImg}
+                        alt='Dilushgaran profile large view'
+                        className='w-full h-auto rounded-2xl shadow-2xl object-cover'
+                        />
+                    </div>
+                </div>
+            )}
         </section>
     </div>
   )
