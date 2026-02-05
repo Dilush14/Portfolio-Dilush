@@ -3,6 +3,7 @@ import tiktok from '../assets/tiktok.png'
 import github from '../assets/github.png'
 import youtube from '../assets/youtube.png'
 import hero from '../assets/hero.png'
+import profileImg from '../assets/profile.jpeg'
 import hi from '../assets/hi.png'
 import CV from '../assets/CV.pdf'
 import { DownloadIcon, Mail } from 'lucide-react'
@@ -60,6 +61,17 @@ const Hero = ({ darkMode }) => {
                                 }`} />
                             </a>
                         ))}
+                    </div>
+                    <div
+                    className='mb-4 sm:mb-6'
+                    data-aos='fade-up'
+                    data-aos-delay='450'
+                    >
+                        <img
+                        src={profileImg}
+                        alt='Dilushgaran profile photo'
+                        className='w-48 h-48 sm:w-60 sm:h-60 rounded-full object-cover border-4 border-orange-500 shadow-lg'
+                        />
                     </div>
                     <h1
                     className={`title-font text-3xl sm:text-4xl lg:text-5xl mb-4 font-bold ${theme.textPrimary}`}
