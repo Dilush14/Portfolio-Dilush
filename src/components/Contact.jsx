@@ -148,8 +148,7 @@ const Contact = ({ darkMode }) => {
             <div className="mt-6 flex justify-center gap-4 sm:gap-5">
               {[
                 { icon: github, alt: "GitHub", link: 'https://github.com/Dilush14' },
-                { icon: linkedIn, alt: "LinkeIn", link: 'https://www.linkedin.com/in/dilushgaran-sathasivam-198417390?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
-                { icon: instagram, alt: "Instagram", link: 'https://www.instagram.com/dilush_6._?igsh=MTVtbXIxZWY4Nm01NQ==' }
+                { icon: linkedIn, alt: "LinkeIn", link: 'www.linkedin.com/in/dilush14' }
               ].map((social, index) => (
                 <a
                   key={index}
