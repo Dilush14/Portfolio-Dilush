@@ -16,7 +16,7 @@ const Projects = ({ darkMode }) => {
             image: project1,
             tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
             demo: "#",
-            code: "#"
+            code: "https://github.com/Dilush14/Hotel-Reservation-System-IWT.git"
         },
         {
             id: 2,
@@ -25,7 +25,7 @@ const Projects = ({ darkMode }) => {
             image: project2,
             tags: ["Java", "JavaScript", "CSS", "MySQL"],
             demo: "#",
-            code: "#"
+            code: "https://github.com/Dilush14/Online-Gaming-Site-OOP.git"
         },
         {
             id: 3,
@@ -34,7 +34,7 @@ const Projects = ({ darkMode }) => {
             image: project3,
             tags: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS"],
             demo: "#",
-            code: "#"
+            code: "https://github.com/Dilush14/PetPulse-ITP.git"
         },
         {
             id: 4,
@@ -43,7 +43,7 @@ const Projects = ({ darkMode }) => {
             image: project4,
             tags: ["Figma", "UI/UX Design"],
             demo: "#",
-            code: "#"
+            code: "https://github.com/Dilush14/LitShelf-Figma.git"
         },
         {
             id: 5,
@@ -52,7 +52,7 @@ const Projects = ({ darkMode }) => {
             image: project5,
             tags: ["Kotlin", "Android Studio"],
             demo: "#",
-            code: "#"
+            code: "https://github.com/Dilush14/LitShelf-Kotlin.git"
         },
         {
             id: 6,
@@ -61,7 +61,7 @@ const Projects = ({ darkMode }) => {
             image: project6,
             tags: ["Kotlin"],
             demo: "#",
-            code: "#"
+            code: "https://github.com/Dilush14/Wellness-Tracker-MAD.git"
         },
         {
             id: 7,
@@ -70,7 +70,7 @@ const Projects = ({ darkMode }) => {
             image: project3,
             tags: ["React.js", "Tailwind CSS", "Framer Motion"],
             demo: "#",
-            code: "#"
+            code: "https://github.com/Dilush14/Portfolio-Dilush.git"
         }
     ];
 
