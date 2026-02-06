@@ -1,9 +1,8 @@
 import React, { useState } from "react"
 import { FaEnvelope, FaPhone } from "react-icons/fa"
 import instagram from "../assets/instagram.png"
-import tiktok from "../assets/tiktok.png"
+import linkedIn from "../assets/linkedin.webp"
 import github from "../assets/github.png"
-import youtube from "../assets/youtube.png"
 import contactImg from "../assets/contact.png"
 
 const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_FORM_ID
@@ -148,14 +147,13 @@ const Contact = ({ darkMode }) => {
             />
             <div className="mt-6 flex justify-center gap-4 sm:gap-5">
               {[
-                { icon: instagram, alt: "Instagram" },
-                { icon: github, alt: "GitHub" },
-                { icon: tiktok, alt: "TikTok" },
-                { icon: youtube, alt: "YouTube" },
+                { icon: github, alt: "GitHub", link: 'https://github.com/Dilush14' },
+                { icon: linkedIn, alt: "LinkeIn", link: 'https://www.linkedin.com/in/dilushgaran-sathasivam-198417390?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+                { icon: instagram, alt: "Instagram", link: 'https://www.instagram.com/dilush_6._?igsh=MTVtbXIxZWY4Nm01NQ==' }
               ].map((social, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href={social.link}
                   target="_blank"
                   className="transform hover:scale-110 transition-transform duration-300"
                 >

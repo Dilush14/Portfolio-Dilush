@@ -2,7 +2,7 @@ import { useState } from 'react'
 import hero from '../assets/hero.png'
 import profileImg from '../assets/profile.jpeg'
 import hi from '../assets/hi.png'
-import CV from '../assets/CV.pdf'
+import CV from '../assets/Dilush_CV.pdf'
 import { DownloadIcon, Mail } from 'lucide-react'
 
 const Hero = ({ darkMode }) => {

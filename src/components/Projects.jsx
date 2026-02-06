@@ -11,7 +11,7 @@ const Projects = ({ darkMode }) => {
     const projects = [
         {
             id: 1,
-            title: "SKM Construction Website",
+            title: "Hotel Management Site",
             desc: "Construction company website with project registration and CRUD functionality.",
             image: project1,
             tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],

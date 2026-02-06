@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
 import { Menu, Moon, Sun, X } from 'lucide-react';
 
@@ -12,6 +12,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         { name: 'About', link: '#about' },
         { name: 'Skills', link: '#skills' },
         { name: 'Projects', link: '#projects' },
+        { name: 'Experience', link: '#experience' },
         { name: 'Contact', link: '#contact' }
     ];
 
@@ -42,13 +43,46 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         SetIsMenuOpen(false);
     };
 
+    // Update active nav item based on scroll position (scroll spy)
+    useEffect(() => {
+        const sectionIds = navItems.map((item) => item.link.replace('#', ''));
+        const sections = sectionIds
+            .map((id) => document.getElementById(id))
+            .filter(Boolean);
+
+        if (!sections.length) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        if (id) {
+                            setActiveSection(id.toLowerCase());
+                        }
+                    }
+                });
+            },
+            {
+                root: null,
+                // Trigger when section is well within viewport
+                rootMargin: '-40% 0px -40% 0px',
+                threshold: 0.2,
+            }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
+
   return (
     <div className='flex justify-center w-full fixed z-50 mt-4'>
         <motion.nav
         initial={{y: -100}}
         animate={{y: 0}}
         transition={{duration: 0.5}}
-        className={`flex items-center justify-center ${colors.navBg} backdrop-blur-lg rounded-2xl px-4 lg:px-8 py-2 shadow-lg`}
+        className={`flex items-center justify-center w-[92%] max-w-5xl ${colors.navBg} backdrop-blur-lg rounded-2xl px-4 lg:px-8 py-2 shadow-lg`}
         >
             <div className='flex items-center justify-between w-full space-x-6 lg:space-x-8'>
                 {/* Logo */}
@@ -94,7 +128,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                     ))}
                 </div>
 
-                <div className='flex items-center space-x-2'>
+                <div className='flex items-center'>
                     {/* Dark Mode Toggle */}
                     <motion.button
                     whileHover={{scale: 1.1}}
@@ -115,16 +149,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                             <Moon className='w-5 h-5 text-gray-700' />
                         )}
                     </motion.button>
-
-                    {/* Button */}
-                    <motion.a
-                    href='#contact'
-                    whileHover={{scale: 1.05}}
-                    whileTap={{scale: 0.95}}
-                    className={`hidden lg:block px-6 py-2 font-semibold rounded-full bg-linear-to-r ${colors.button} text-white shadow-md hover:shadow-lg transition-shadow`}
-                    >
-                        Hire Me
-                    </motion.a>
                 </div>
 
                 {/* Mobile Menu Buttons */}
@@ -192,14 +216,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                             </a>
                         ))}
 
-                        <motion.a
-                        href='#contact'
-                        onClick={() => SetIsMenuOpen(false)}
-                        whileTap={{scale: 0.95}}
-                        className={`block py-3 px-4 text-center font-semibold rounded-lg bg-linear-to-r ${colors.button} text-white shadow-md`}
-                        >
-                            Hire Me
-                        </motion.a>
                     </div>
                 </motion.div>
             )}
