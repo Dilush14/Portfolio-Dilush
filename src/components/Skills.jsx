@@ -57,7 +57,7 @@ const Skills = ({ darkMode }) => {
 
     // Tools & Design
     { name: "Git", icon: FaGit, level: 85, color: "from-orange-500 to-red-500" },
-    { name: "GitHub", icon: FaGithub, level: 85, color: "from-gray-500 to-gray-700" },
+    { name: "GitHub", icon: FaGithub, level: 85, color: "from-yellow-800 to-yellow-200" },
     { name: "Figma", icon: FaFigma, level: 80, color: "from-pink-500 to-purple-500" },
     ];
 
