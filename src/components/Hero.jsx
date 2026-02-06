@@ -1,8 +1,4 @@
 import { useState } from 'react'
-import instagram from '../assets/instagram.png'
-import tiktok from '../assets/tiktok.png'
-import github from '../assets/github.png'
-import youtube from '../assets/youtube.png'
 import hero from '../assets/hero.png'
 import profileImg from '../assets/profile.jpeg'
 import hi from '../assets/hi.png'
@@ -12,13 +8,6 @@ import { DownloadIcon, Mail } from 'lucide-react'
 const Hero = ({ darkMode }) => {
 
     const [showProfileModal, setShowProfileModal] = useState(false);
-
-    const socialIcons = [
-        {icon: instagram, slt: 'instagram'},
-        {icon: github, slt: 'github'},
-        {icon: tiktok, slt: 'tiktok'},
-        {icon: youtube, slt: 'youtube'}
-    ];
 
     const darkTheme = {
         textPrimary: 'text-white',
@@ -44,27 +33,8 @@ const Hero = ({ darkMode }) => {
         data-aos-delat='250'
         className='body-font z-10'
         >
-            <div className='container mx-auto flex px-4 sm:px-8 lg:px-14 py-12 lg:py-12 flex-col lg:flex-row items-center justify-between lg:mt-14 mt-14'>
+            <div className='container mx-auto flex px-4 sm:px-8 lg:px-14 pt-16 pb-6 lg:pt-20 lg:pb-8 flex-col lg:flex-row items-center justify-between lg:mt-14 mt-14'>
                 <div className='lg:w-1/2 w-full flex flex-col items-center lg:items-start text-center lg:text-left mb-12 lg:mb-0'>
-                    <div className='flex justify-center lg:justify-start gap-4 sm:gap-6 mb-6 sm:mb-7 w-full'>
-                        {socialIcons.map((social, index) => (
-                            <a
-                            key={index}
-                            href='#'
-                            target='_blank'
-                            data-aos-delay={`${400 + index * 100}`}
-                            className='transform hover:scale-110 transition-transform duration-300'
-                            >
-                                <img
-                                src={social.icon}
-                                alt={social.alt}
-                                className={`w-8 h-8 sm:w-10 sm:h-10 object-contain ${darkMode
-                                    ? ''
-                                    : 'filter brightness-75'
-                                }`} />
-                            </a>
-                        ))}
-                    </div>
                     <div
                     className='mb-4 sm:mb-6 cursor-pointer'
                     data-aos='fade-up'
