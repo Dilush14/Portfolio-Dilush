@@ -11,8 +11,8 @@ const Projects = ({ darkMode }) => {
     const projects = [
         {
             id: 1,
-            title: "Hotel Management Site",
-            desc: "Construction company website with project registration and CRUD functionality.",
+            title: "Hotel Reservation System",
+            desc: "Hotel reservation system with wedding registration and CRUD functionality.",
             image: project1,
             tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
             demo: "#",
@@ -21,7 +21,7 @@ const Projects = ({ darkMode }) => {
         {
             id: 2,
             title: "Online Gaming Management System",
-            desc: "Web-based gaming system with player management and CRUD operations.",
+            desc: "Web-based gaming system with games management and CRUD operations.",
             image: project2,
             tags: ["Java", "JavaScript", "CSS", "MySQL"],
             demo: "#",
@@ -30,7 +30,7 @@ const Projects = ({ darkMode }) => {
         {
             id: 3,
             title: "Pet Care & Adoption Management System",
-            desc: "Full-stack MERN application for pet listing and adoption management.",
+            desc: "Full-stack MERN application for pet caring and adoption management.",
             image: project3,
             tags: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS"],
             demo: "#",
