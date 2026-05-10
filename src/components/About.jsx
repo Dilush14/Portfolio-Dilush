@@ -61,25 +61,25 @@ const About = ({ darkMode }) => {
                     data-aos='zoom-in'
                     data-aos-delay='700'
                     >
-                        <div className='text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-400'>5+</div>
+                        <div className='text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-400'>3+</div>
                         <div className={`text-xs sm:text-sm lg:text-base
                             ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Education</div>
                     </div>
-                    <div
+                    /*<div
                     className='text-center'
                     data-aos='zoom-in'
                     data-aos-delay='800'
                     >
-                        <div className='text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-400'>2+</div>
+                        <div className='text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-400'>6+</div>
                         <div className={`text-xs sm:text-sm lg:text-base
-                            ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Years Experience</div>
-                    </div>
+                            ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Months Experience</div>
+                    </div>*/
                     <div
                     className='text-center'
                     data-aos='zoom-in'
                     data-aos-delay='900'
                     >
-                        <div className='text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-400'>50+</div>
+                        <div className='text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-400'>9+</div>
                         <div className={`text-xs sm:text-sm lg:text-base
                             ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Projects Completed</div>
                     </div>
