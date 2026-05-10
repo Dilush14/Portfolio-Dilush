@@ -65,7 +65,7 @@ const About = ({ darkMode }) => {
                         <div className={`text-xs sm:text-sm lg:text-base
                             ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Education</div>
                     </div>
-                    /*<div
+                  {/*<div
                     className='text-center'
                     data-aos='zoom-in'
                     data-aos-delay='800'
@@ -73,7 +73,7 @@ const About = ({ darkMode }) => {
                         <div className='text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-400'>6+</div>
                         <div className={`text-xs sm:text-sm lg:text-base
                             ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Months Experience</div>
-                    </div>*/
+                    </div>*/}
                     <div
                     className='text-center'
                     data-aos='zoom-in'
