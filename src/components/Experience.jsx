@@ -3,17 +3,10 @@ import { motion } from 'framer-motion'
 const workData = [
   {
     role: 'Software Engineering Intern',
-    company: 'Tech Company',
-    duration: '2024 - Present',
+    company: 'Techorin',
+    duration: '2026 March - Present',
     description:
       'Contributing to full-stack features, fixing bugs, and collaborating with senior engineers to deliver production-ready code.',
-  },
-  {
-    role: 'Freelance Web Developer',
-    company: 'Self-employed',
-    duration: '2022 - 2024',
-    description:
-      'Designed and built responsive websites and small web apps for clients using React, Tailwind CSS, and modern tooling.',
   },
 ]
 
