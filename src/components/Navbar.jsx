@@ -12,7 +12,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         { name: 'About', link: '#about' },
         { name: 'Skills', link: '#skills' },
         { name: 'Projects', link: '#projects' },
-        {/*{ name: 'Experience', link: '#experience' },*/}
         { name: 'Contact', link: '#contact' }
     ];
 
@@ -43,7 +42,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         SetIsMenuOpen(false);
     };
 
-    // Update active nav item based on scroll position (scroll spy)
     useEffect(() => {
         const sectionIds = navItems.map((item) => item.link.replace('#', ''));
         const sections = sectionIds
@@ -65,7 +63,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             },
             {
                 root: null,
-                // Trigger when section is well within viewport
                 rootMargin: '-40% 0px -40% 0px',
                 threshold: 0.2,
             }
